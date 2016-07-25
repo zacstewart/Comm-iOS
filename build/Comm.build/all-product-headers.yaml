@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/zacstewart/Code/zacstewart/Comm/build/Release-iphoneos/Comm.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Comm-Swift.h",
+          'external-contents': "/Users/zacstewart/Code/zacstewart/Comm/build/Release-iphoneos/Comm.framework/Headers/Comm-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Comm.h",
+          'external-contents': "/Users/zacstewart/Code/zacstewart/Comm/Comm/Comm.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zacstewart/Code/zacstewart/Comm/build/Release-iphoneos/Comm.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/zacstewart/Code/zacstewart/Comm/build/Comm.build/Release-iphoneos/Comm.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

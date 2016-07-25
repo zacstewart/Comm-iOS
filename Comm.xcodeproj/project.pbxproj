@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D703D13C1D45D26700104682 /* libcomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D703D13B1D45D26700104682 /* libcomm.a */; };
 		D79363941D4578C100479A4A /* Comm.h in Headers */ = {isa = PBXBuildFile; fileRef = D79363931D4578C100479A4A /* Comm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D793639B1D4578C100479A4A /* Comm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79363901D4578C100479A4A /* Comm.framework */; };
 		D79363A01D4578C100479A4A /* CommTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793639F1D4578C100479A4A /* CommTests.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D703D13B1D45D26700104682 /* libcomm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcomm.a; path = "libcomm/comm/c_api/target/x86_64-apple-ios/debug/libcomm.a"; sourceTree = "<group>"; };
 		D79363901D4578C100479A4A /* Comm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79363931D4578C100479A4A /* Comm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comm.h; sourceTree = "<group>"; };
 		D79363951D4578C100479A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D703D13C1D45D26700104682 /* libcomm.a in Frameworks */,
 				D793639B1D4578C100479A4A /* Comm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +56,7 @@
 		D79363861D4578C100479A4A = {
 			isa = PBXGroup;
 			children = (
+				D703D13B1D45D26700104682 /* libcomm.a */,
 				D79363921D4578C100479A4A /* Comm */,
 				D793639E1D4578C100479A4A /* CommTests */,
 				D79363911D4578C100479A4A /* Products */,
@@ -310,6 +314,7 @@
 		D79363A51D4578C100479A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,15 +322,24 @@
 				INFOPLIST_FILE = Comm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.Comm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm/";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D79363A61D4578C100479A4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -333,29 +347,55 @@
 				INFOPLIST_FILE = Comm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.Comm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm/";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
 		D79363A81D4578C100479A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CommTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug/",
+					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.CommTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D79363A91D4578C100479A4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CommTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug/",
+					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.CommTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -378,6 +418,7 @@
 				D79363A61D4578C100479A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D79363A71D4578C100479A4A /* Build configuration list for PBXNativeTarget "CommTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +427,7 @@
 				D79363A91D4578C100479A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

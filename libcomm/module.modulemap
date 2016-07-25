@@ -1,0 +1,5 @@
+module libcomm [system][extern_c] {
+    header "comm/c_api/include/comm.h"
+    link "comm"
+    export *
+}
