@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D703D13C1D45D26700104682 /* libcomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D703D13B1D45D26700104682 /* libcomm.a */; };
+		D790EFDD1D45D7BB00C0A0B0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDC1D45D7BB00C0A0B0 /* Node.swift */; };
+		D790EFDF1D45D7C700C0A0B0 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */; };
+		D790EFE01D45DA2E00C0A0B0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDC1D45D7BB00C0A0B0 /* Node.swift */; };
 		D79363941D4578C100479A4A /* Comm.h in Headers */ = {isa = PBXBuildFile; fileRef = D79363931D4578C100479A4A /* Comm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D793639B1D4578C100479A4A /* Comm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79363901D4578C100479A4A /* Comm.framework */; };
 		D79363A01D4578C100479A4A /* CommTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793639F1D4578C100479A4A /* CommTests.swift */; };
@@ -28,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		D703D13B1D45D26700104682 /* libcomm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcomm.a; path = "libcomm/comm/c_api/target/x86_64-apple-ios/debug/libcomm.a"; sourceTree = "<group>"; };
+		D790EFDC1D45D7BB00C0A0B0 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		D79363901D4578C100479A4A /* Comm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79363931D4578C100479A4A /* Comm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comm.h; sourceTree = "<group>"; };
 		D79363951D4578C100479A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				D79363931D4578C100479A4A /* Comm.h */,
+				D790EFDC1D45D7BB00C0A0B0 /* Node.swift */,
 				D79363AF1D457A2100479A4A /* Address.swift */,
 				D79363951D4578C100479A4A /* Info.plist */,
 			);
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				D793639F1D4578C100479A4A /* CommTests.swift */,
+				D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */,
 				D79369AF1D458A6300479A4A /* AddressTest.swift */,
 				D79363A11D4578C100479A4A /* Info.plist */,
 			);
@@ -206,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D79363B01D457A2100479A4A /* Address.swift in Sources */,
+				D790EFDD1D45D7BB00C0A0B0 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D79369B01D458A6300479A4A /* AddressTest.swift in Sources */,
+				D790EFE01D45DA2E00C0A0B0 /* Node.swift in Sources */,
 				D79363B11D457A2100479A4A /* Address.swift in Sources */,
 				D79363A01D4578C100479A4A /* CommTests.swift in Sources */,
+				D790EFDF1D45D7C700C0A0B0 /* NodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
