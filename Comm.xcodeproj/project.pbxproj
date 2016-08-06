@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D703D13C1D45D26700104682 /* libcomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D703D13B1D45D26700104682 /* libcomm.a */; };
+		D71FC09B1D568CC80091CEC2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79363AF1D457A2100479A4A /* Address.swift */; };
 		D790EFDD1D45D7BB00C0A0B0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDC1D45D7BB00C0A0B0 /* Node.swift */; };
 		D790EFDF1D45D7C700C0A0B0 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */; };
 		D790EFE01D45DA2E00C0A0B0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDC1D45D7BB00C0A0B0 /* Node.swift */; };
@@ -15,8 +16,10 @@
 		D793639B1D4578C100479A4A /* Comm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79363901D4578C100479A4A /* Comm.framework */; };
 		D79363A01D4578C100479A4A /* CommTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793639F1D4578C100479A4A /* CommTests.swift */; };
 		D79363B01D457A2100479A4A /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79363AF1D457A2100479A4A /* Address.swift */; };
-		D79363B11D457A2100479A4A /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79363AF1D457A2100479A4A /* Address.swift */; };
 		D79369B01D458A6300479A4A /* AddressTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79369AF1D458A6300479A4A /* AddressTest.swift */; };
+		D793A4FE1D46BC6400BCEDD9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A4FD1D46BC6400BCEDD9 /* Network.swift */; };
+		D793A4FF1D46BC6400BCEDD9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A4FD1D46BC6400BCEDD9 /* Network.swift */; };
+		D793A5021D46BC7900BCEDD9 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A5001D46BC7900BCEDD9 /* NetworkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,8 @@
 		D79363A11D4578C100479A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D79363AF1D457A2100479A4A /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		D79369AF1D458A6300479A4A /* AddressTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTest.swift; sourceTree = "<group>"; };
+		D793A4FD1D46BC6400BCEDD9 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D793A5001D46BC7900BCEDD9 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +71,10 @@
 		D79363861D4578C100479A4A = {
 			isa = PBXGroup;
 			children = (
-				D703D13B1D45D26700104682 /* libcomm.a */,
 				D79363921D4578C100479A4A /* Comm */,
 				D793639E1D4578C100479A4A /* CommTests */,
 				D79363911D4578C100479A4A /* Products */,
+				D703D13B1D45D26700104682 /* libcomm.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,8 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				D79363931D4578C100479A4A /* Comm.h */,
-				D790EFDC1D45D7BB00C0A0B0 /* Node.swift */,
 				D79363AF1D457A2100479A4A /* Address.swift */,
+				D790EFDC1D45D7BB00C0A0B0 /* Node.swift */,
+				D793A4FD1D46BC6400BCEDD9 /* Network.swift */,
 				D79363951D4578C100479A4A /* Info.plist */,
 			);
 			path = Comm;
@@ -97,8 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				D793639F1D4578C100479A4A /* CommTests.swift */,
-				D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */,
 				D79369AF1D458A6300479A4A /* AddressTest.swift */,
+				D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */,
+				D793A5001D46BC7900BCEDD9 /* NetworkTests.swift */,
 				D79363A11D4578C100479A4A /* Info.plist */,
 			);
 			path = CommTests;
@@ -214,6 +221,7 @@
 			files = (
 				D79363B01D457A2100479A4A /* Address.swift in Sources */,
 				D790EFDD1D45D7BB00C0A0B0 /* Node.swift in Sources */,
+				D793A4FE1D46BC6400BCEDD9 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71FC09B1D568CC80091CEC2 /* Address.swift in Sources */,
+				D793A5021D46BC7900BCEDD9 /* NetworkTests.swift in Sources */,
 				D79369B01D458A6300479A4A /* AddressTest.swift in Sources */,
 				D790EFE01D45DA2E00C0A0B0 /* Node.swift in Sources */,
-				D79363B11D457A2100479A4A /* Address.swift in Sources */,
+				D793A4FF1D46BC6400BCEDD9 /* Network.swift in Sources */,
 				D79363A01D4578C100479A4A /* CommTests.swift in Sources */,
 				D790EFDF1D45D7C700C0A0B0 /* NodeTests.swift in Sources */,
 			);

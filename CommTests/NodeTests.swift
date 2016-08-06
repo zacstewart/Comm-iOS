@@ -1,7 +1,7 @@
 import XCTest
 @testable import Comm
 
-class UpdNodeTests {
+class UpdNodeTests: XCTestCase {
     func testInitDestroy() {
         let address = Address.forContent("hello")
         let socketAddress = "1.3.3.7:666"
