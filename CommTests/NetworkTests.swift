@@ -17,7 +17,7 @@ class NetworkTests: XCTestCase {
             routers: routers)
 
         network = nil // Should deinit everything cleanly
-        
+
         XCTAssertTrue(true)
     }
 }
