@@ -6,6 +6,6 @@ $(LIBCOMM):
 libcomm: $(LIBCOMM)
 .PHONY: libcomm
 
-test: $(LIBCOMM)
+test:
 	xcodebuild test -scheme Comm -destination 'name=iPhone 6s'
 .PHONY: test
