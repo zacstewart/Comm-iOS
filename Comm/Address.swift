@@ -2,9 +2,9 @@ import Foundation
 import libcomm
 
 class Address: NSObject, NSCopying {
-    internal let raw: UnsafeMutablePointer<Void>
+    private let raw: UnsafeMutablePointer<comm_address_t>
 
-    init(rawPointer: UnsafeMutablePointer<Void>) {
+    init(rawPointer: UnsafeMutablePointer<comm_address_t>) {
         raw = rawPointer
     }
 
