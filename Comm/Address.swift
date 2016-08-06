@@ -1,11 +1,3 @@
-//
-//  Address.swift
-//  Comm
-//
-//  Created by Zac Stewart on 7/24/16.
-//  Copyright © 2016 Zac Stewart. All rights reserved.
-//
-
 import Foundation
 import libcomm
 
