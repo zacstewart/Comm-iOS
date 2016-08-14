@@ -2,7 +2,8 @@ import Foundation
 import libcomm
 
 class Network {
-    internal let raw: UnsafeMutablePointer<comm_network_t>
+    private let raw: UnsafeMutablePointer<comm_network_t>
+    private var consumed: Bool = false
 
     init(selfNode: UdpNode, host: String, routers: [UdpNode]) {
         let host = UnsafeMutablePointer<Int8>((host as NSString).UTF8String)
@@ -16,7 +17,18 @@ class Network {
             rawRouters.count)
     }
 
+    internal func consume() -> UnsafeMutablePointer<comm_network_t>? {
+        if !consumed {
+            consumed = true
+            return raw
+        } else {
+            return nil
+        }
+    }
+
     deinit {
-        comm_network_destroy(raw)
+        if !consumed {
+            comm_network_destroy(self.consume()!)
+        }
     }
 }

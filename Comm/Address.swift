@@ -35,7 +35,7 @@ class Address: NSObject, NSCopying {
     }
 
     internal func consume() -> UnsafeMutablePointer<comm_address_t>? {
-        if (!consumed) {
+        if !consumed {
             consumed = true
             return raw
         } else {

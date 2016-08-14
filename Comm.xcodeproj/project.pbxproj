@@ -12,6 +12,8 @@
 		D71FC0971D568C600091CEC2 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71FC0951D568C600091CEC2 /* Client.swift */; };
 		D71FC09A1D568C6D0091CEC2 /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71FC0981D568C6D0091CEC2 /* ClientTest.swift */; };
 		D71FC09B1D568CC80091CEC2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79363AF1D457A2100479A4A /* Address.swift */; };
+		D71FC09D1D578E7F0091CEC2 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71FC09C1D578E7F0091CEC2 /* TextMessage.swift */; };
+		D71FC09E1D578E7F0091CEC2 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71FC09C1D578E7F0091CEC2 /* TextMessage.swift */; };
 		D790EFDD1D45D7BB00C0A0B0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDC1D45D7BB00C0A0B0 /* Node.swift */; };
 		D790EFDF1D45D7C700C0A0B0 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */; };
 		D790EFE01D45DA2E00C0A0B0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D790EFDC1D45D7BB00C0A0B0 /* Node.swift */; };
@@ -39,6 +41,7 @@
 		D703D13B1D45D26700104682 /* libcomm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcomm.a; path = "libcomm/comm/c_api/target/x86_64-apple-ios/debug/libcomm.a"; sourceTree = "<group>"; };
 		D71FC0951D568C600091CEC2 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		D71FC0981D568C6D0091CEC2 /* ClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
+		D71FC09C1D578E7F0091CEC2 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
 		D790EFDC1D45D7BB00C0A0B0 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		D790EFDE1D45D7C700C0A0B0 /* NodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		D79363901D4578C100479A4A /* Comm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +101,7 @@
 				D79363931D4578C100479A4A /* Comm.h */,
 				D79363AF1D457A2100479A4A /* Address.swift */,
 				D71FC0951D568C600091CEC2 /* Client.swift */,
+				D71FC09C1D578E7F0091CEC2 /* TextMessage.swift */,
 				D790EFDC1D45D7BB00C0A0B0 /* Node.swift */,
 				D793A4FD1D46BC6400BCEDD9 /* Network.swift */,
 				D79363951D4578C100479A4A /* Info.plist */,
@@ -226,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71FC09D1D578E7F0091CEC2 /* TextMessage.swift in Sources */,
 				D79363B01D457A2100479A4A /* Address.swift in Sources */,
 				D790EFDD1D45D7BB00C0A0B0 /* Node.swift in Sources */,
 				D71FC0961D568C600091CEC2 /* Client.swift in Sources */,
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71FC09E1D578E7F0091CEC2 /* TextMessage.swift in Sources */,
 				D71FC09B1D568CC80091CEC2 /* Address.swift in Sources */,
 				D793A5021D46BC7900BCEDD9 /* NetworkTests.swift in Sources */,
 				D71FC0971D568C600091CEC2 /* Client.swift in Sources */,
