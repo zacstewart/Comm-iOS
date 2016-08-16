@@ -1,17 +1,26 @@
 import Foundation
 import libcomm
 
-class TextMessage {
+public class TextMessage: NSObject {
     private let raw: UnsafeMutablePointer<comm_text_message_t>
     private var consumed: Bool = false
 
-    init(rawPointer: UnsafeMutablePointer<comm_text_message_t>) {
+    public init(rawPointer: UnsafeMutablePointer<comm_text_message_t>) {
         raw = rawPointer
     }
 
-    init(sender: Address, text: String) {
+    public init(sender: Address, text: String) {
         let text = UnsafeMutablePointer<Int8>((text as NSString).UTF8String)
         raw = comm_text_message_new(sender.consume()!, text);
+    }
+    
+    public func sender() -> Address {
+        return Address(rawPointer: comm_text_message_sender(raw))
+    }
+    
+    public func text() -> String? {
+        let c_str = strdup(comm_text_message_text(raw));
+        return String.fromCString(c_str)
     }
 
     internal func consume() -> UnsafeMutablePointer<comm_text_message_t>? {

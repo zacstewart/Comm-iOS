@@ -1,11 +1,11 @@
 import Foundation
 import libcomm
 
-class UdpNode {
+public class UdpNode: NSObject {
     private let raw: UnsafeMutablePointer<comm_udp_node_t>
     private var consumed: Bool = false
 
-    init(address: Address, socketAddress: String) {
+    public init(address: Address, socketAddress: String) {
         let socketAddress = UnsafeMutablePointer<Int8>((socketAddress as NSString).UTF8String)
         raw = comm_udp_node_new(address.consume()!, socketAddress)
     }

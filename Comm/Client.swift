@@ -8,25 +8,25 @@ func receivedMesssage(rawMessage: UnsafeMutablePointer<comm_text_message_t>) {
     receivedMessageAction(message)
 }
 
-class Client {
+public class Client: NSObject {
     private let raw: UnsafeMutablePointer<comm_client_t>
     private var rawCommands: UnsafeMutablePointer<comm_client_commands_t>?
     private var consumed: Bool = false
 
-    init(address: Address) {
+    public init(address: Address) {
         raw = comm_client_new(address.consume()!)
         comm_client_register_text_message_received_callback(raw, receivedMesssage)
     }
 
-    func run(network: Network) {
+    public func run(network: Network) {
         rawCommands = comm_client_run(self.consume()!, network.consume()!)
     }
 
-    func attachTextMessageReceivedAction(action: (TextMessage) -> ()) {
+    public func attachTextMessageReceivedAction(action: (TextMessage) -> ()) {
         receivedMessageAction = action
     }
 
-    func sendTextMessage(textMessage: TextMessage, recipient: Address) {
+    public func sendTextMessage(textMessage: TextMessage, recipient: Address) {
         comm_client_commands_send_text_message(
             rawCommands!,
             recipient.consume()!,
