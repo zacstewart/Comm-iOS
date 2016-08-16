@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D703D13C1D45D26700104682 /* libcomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D703D13B1D45D26700104682 /* libcomm.a */; };
+		D708DF8D1D60EB3400901003 /* libcomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D708DF8C1D60EB3400901003 /* libcomm.a */; };
+		D708DF8F1D60EC9700901003 /* libcomm.a in Resources */ = {isa = PBXBuildFile; fileRef = D708DF8C1D60EB3400901003 /* libcomm.a */; };
 		D71FC0961D568C600091CEC2 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71FC0951D568C600091CEC2 /* Client.swift */; };
 		D71FC0971D568C600091CEC2 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71FC0951D568C600091CEC2 /* Client.swift */; };
 		D71FC09A1D568C6D0091CEC2 /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71FC0981D568C6D0091CEC2 /* ClientTest.swift */; };
@@ -25,6 +26,7 @@
 		D793A4FE1D46BC6400BCEDD9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A4FD1D46BC6400BCEDD9 /* Network.swift */; };
 		D793A4FF1D46BC6400BCEDD9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A4FD1D46BC6400BCEDD9 /* Network.swift */; };
 		D793A5021D46BC7900BCEDD9 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A5001D46BC7900BCEDD9 /* NetworkTests.swift */; };
+		D7EB39811D633E55008C78F3 /* libcomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D708DF8C1D60EB3400901003 /* libcomm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D703D13B1D45D26700104682 /* libcomm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcomm.a; path = "libcomm/comm/c_api/target/x86_64-apple-ios/debug/libcomm.a"; sourceTree = "<group>"; };
+		D708DF8C1D60EB3400901003 /* libcomm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcomm.a; path = "Comm/libcomm/comm/c_api/target/fat-apple-ios/debug/libcomm.a"; sourceTree = "<group>"; };
 		D71FC0951D568C600091CEC2 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		D71FC0981D568C6D0091CEC2 /* ClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
 		D71FC09C1D578E7F0091CEC2 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D708DF8D1D60EB3400901003 /* libcomm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D703D13C1D45D26700104682 /* libcomm.a in Frameworks */,
 				D793639B1D4578C100479A4A /* Comm.framework in Frameworks */,
+				D7EB39811D633E55008C78F3 /* libcomm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +82,10 @@
 		D79363861D4578C100479A4A = {
 			isa = PBXGroup;
 			children = (
+				D708DF8C1D60EB3400901003 /* libcomm.a */,
 				D79363921D4578C100479A4A /* Comm */,
 				D793639E1D4578C100479A4A /* CommTests */,
 				D79363911D4578C100479A4A /* Products */,
-				D703D13B1D45D26700104682 /* libcomm.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +187,7 @@
 				TargetAttributes = {
 					D793638F1D4578C100479A4A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N9W9VW843B;
 					};
 					D79363991D4578C100479A4A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -213,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D708DF8F1D60EC9700901003 /* libcomm.a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,24 +366,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Comm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+					"$(PROJECT_DIR)/Comm/libcomm/comm/c_api/target/fat-apple-ios/debug",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.Comm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm/";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Comm/libcomm";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -386,23 +395,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Comm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+					"$(PROJECT_DIR)/Comm/libcomm/comm/c_api/target/fat-apple-ios/debug",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.Comm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm/";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Comm/libcomm";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -415,12 +427,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug/",
-					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+					"$(PROJECT_DIR)/Comm/libcomm/comm/c_api/target/fat-apple-ios/debug",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.CommTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Comm/libcomm";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -435,12 +446,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug/",
-					"$(PROJECT_DIR)/libcomm/comm/c_api/target/x86_64-apple-ios/debug",
+					"$(PROJECT_DIR)/Comm/libcomm/comm/c_api/target/fat-apple-ios/debug",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zacstewart.CommTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/libcomm";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Comm/libcomm";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
