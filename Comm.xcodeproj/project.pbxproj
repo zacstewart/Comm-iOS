@@ -143,6 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D79363A41D4578C100479A4A /* Build configuration list for PBXNativeTarget "Comm" */;
 			buildPhases = (
+				D7F9F2441D6344E900E11B1D /* ShellScript */,
 				D793638B1D4578C100479A4A /* Sources */,
 				D793638C1D4578C100479A4A /* Frameworks */,
 				D793638D1D4578C100479A4A /* Headers */,
@@ -229,6 +230,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7F9F2441D6344E900E11B1D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=${PATH}:${HOME}/.cargo/bin\nmake libcomm";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D793638B1D4578C100479A4A /* Sources */ = {

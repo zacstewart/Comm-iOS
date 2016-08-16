@@ -2,20 +2,21 @@ ARCHS=i386-apple-ios x86_64-apple-ios armv7-apple-ios armv7s-apple-ios aarch64-a
 FATLIB=Comm/libcomm/comm/c_api/target/fat-apple-ios/debug/libcomm.a
 PREFIX=Comm/libcomm/comm/c_api/target/
 SUFFIX=/debug/libcomm.a
+CARGO=cargo
 LIBS=$(addprefix $(PREFIX), $(addsuffix $(SUFFIX), $(ARCHS)))
 
 libcomm: $(FATLIB)
 .PHONY: libcomm
 
 $(FATLIB): $(LIBS)
-	mkdir -p libcomm/comm/c_api/target/fat-apple-ios/debug
+	mkdir -p Comm/libcomm/comm/c_api/target/fat-apple-ios/debug
 	lipo -create $(LIBS) -output $(FATLIB)
 
 $(PREFIX)%$(SUFFIX):
-	cargo build --manifest-path libcomm/comm/c_api/Cargo.toml --target $*
+	$(CARGO) build --manifest-path Comm/libcomm/comm/c_api/Cargo.toml --target $*
 
 clean:
-	cargo clean --manifest-path libcomm/comm/c_api/Cargo.toml
+	$(CARGO) clean --manifest-path Comm/libcomm/comm/c_api/Cargo.toml
 	xcodebuild clean
 .PHONY: clean
 
