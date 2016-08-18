@@ -243,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PATH=${PATH}:${HOME}/.cargo/bin\nmake libcomm";
+			shellScript = "env -i PATH=${PATH}:${HOME}/.cargo/bin make libcomm";
 		};
 /* End PBXShellScriptBuildPhase section */
 
