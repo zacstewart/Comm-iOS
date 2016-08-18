@@ -4,15 +4,14 @@ import XCTest
 class NetworkTests: XCTestCase {
     func testInitDestroy() {
         let address = Address.forContent("alpha")
-        let socketAddress = "1.3.3.7:666"
-        let selfNode = UdpNode(address: address, socketAddress: socketAddress)
+        let socketAddress = "1.3.3.7:9666"
 
         let routerAddress = Address.forContent("beta")
-        let routerSocketAddress = "1.3.3.7:667"
+        let routerSocketAddress = "1.3.3.7:9667"
         let routers = [UdpNode(address: routerAddress, socketAddress: routerSocketAddress)]
 
         var network: Network? = Network(
-            selfNode: selfNode,
+            selfAddress: address,
             host: socketAddress,
             routers: routers)
 

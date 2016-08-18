@@ -12,14 +12,13 @@ class ClientTest: XCTestCase {
     func testClientRun() {
         let address = Address.forContent("alpha")
         let socketAddress = "127.0.0.1:6000"
-        let selfNode = UdpNode(address: address.copy() as! Address, socketAddress: socketAddress)
 
         let routerAddress = Address.forContent("beta")
         let routerSocketAddress = "127.0.0.1:7000"
         let routers = [UdpNode(address: routerAddress, socketAddress: routerSocketAddress)]
 
         let network = Network(
-            selfNode: selfNode,
+            selfAddress: address.copy() as! Address,
             host: socketAddress,
             routers: routers)
 
@@ -30,14 +29,13 @@ class ClientTest: XCTestCase {
     func testSendTextMesssage() {
         let address = Address.forContent("alpha")
         let socketAddress = "127.0.0.1:6001"
-        let selfNode = UdpNode(address: address.copy() as! Address, socketAddress: socketAddress)
 
         let routerAddress = Address.forContent("beta")
         let routerSocketAddress = "127.0.0.1:7001"
         let routers = [UdpNode(address: routerAddress, socketAddress: routerSocketAddress)]
 
         let network = Network(
-            selfNode: selfNode,
+            selfAddress: address.copy() as! Address,
             host: socketAddress,
             routers: routers)
 
